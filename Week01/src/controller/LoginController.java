@@ -17,7 +17,7 @@ public class LoginController implements ActionListener {
             if (user != null) {
                 input = JOptionPane.showInputDialog("Pin:");
                 if (user.getPin() == Integer.parseInt(input)) {
-                    Week01.login = user;
+                     Week01.user = user;
                     Week01.first.setVisible(false);
                     Week01.second.setVisible(true);
                 } else {
@@ -29,7 +29,7 @@ public class LoginController implements ActionListener {
                         "Wrong username!");
             }
         } else {
-            Week01.login = null;
+            Week01.user = null;
             Week01.first.setVisible(true);
             Week01.second.setVisible(false);
         }
