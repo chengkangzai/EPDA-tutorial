@@ -1,5 +1,6 @@
 package view;
 
+import controller.DepositController;
 import controller.LoginController;
 
 import javax.swing.*;
@@ -20,9 +21,14 @@ public class Page2 extends JFrame {
         update = new Button("Update");
         logout = new Button("Logout");
         logout.addActionListener(new LoginController());
+        deposit.addActionListener(new DepositController());
         add(deposit);
         add(withdraw);
         add(update);
         add(logout);
+    }
+
+    public Button getDeposit() {
+        return deposit;
     }
 }
