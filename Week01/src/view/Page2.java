@@ -2,6 +2,7 @@ package view;
 
 import controller.DepositController;
 import controller.LoginController;
+import controller.UpdatePasswordController;
 import controller.WithdrawController;
 
 import javax.swing.*;
@@ -24,6 +25,7 @@ public class Page2 extends JFrame {
         logout.addActionListener(new LoginController());
         deposit.addActionListener(new DepositController());
         withdraw.addActionListener(new WithdrawController());
+        update.addActionListener(new UpdatePasswordController());
         add(deposit);
         add(withdraw);
         add(update);
@@ -36,5 +38,9 @@ public class Page2 extends JFrame {
 
     public Button getWithdraw() {
         return withdraw;
+    }
+
+    public Button getUpdate() {
+        return update;
     }
 }
